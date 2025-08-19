@@ -1,3 +1,5 @@
+"use client";
+export const dynamic = 'force-dynamic';
 import { CanvasBackgroundWithGrid } from '@/components/canvas/elements/background/CanvasBackground';
 import { useState } from 'react';
 

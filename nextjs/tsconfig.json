@@ -1,7 +1,11 @@
 {
   "compilerOptions": {
     "target": "ES2022",
-    "lib": ["dom", "dom.iterable", "es2022"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "es2022"
+    ],
     "allowJs": false,
     "skipLibCheck": true,
     "strict": true,
@@ -15,12 +19,50 @@
     "incremental": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": ["*"],
-      "@n8n/*": ["shims/@n8n/*","@n8n/*/src/index.ts"],
-      "@/constants": ["constants.ts"],
-      "n8n-workflow": ["workflow/src/index.ts"]
-    }
+      "@/*": [
+        "*"
+      ],
+      "@n8n/*": [
+        "shims/@n8n/*"
+      ],
+      "@n8n/rest-api-client/*": [
+        "shims/@n8n/rest-api-client/*"
+      ],
+      "@n8n/ai-workflow-builder.ee/*": [
+        "shims/@n8n/ai-workflow-builder.ee/*"
+      ],
+      "@n8n/rest-api-client/*": [
+        "shims/@n8n/rest-api-client/*",
+        "@n8n/rest-api-client/*/src/index.ts"
+      ],
+      "@/constants": [
+        "constants.ts"
+      ],
+      "n8n-workflow": [
+        "workflow/src/index.ts"
+      ]
+    },
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules"]
+  "include": [
+    "next-env.d.ts",
+    "app/**/*.ts",
+    "app/**/*.tsx",
+    "components/**/*.ts",
+    "components/**/*.tsx",
+    "stores/**/*.ts",
+    "utils/**/*.ts",
+    "shims/**/*.ts",
+    "shims/**/*.tsx",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "@n8n/**",
+    "!shims/@n8n/**"
+  ]
 }
