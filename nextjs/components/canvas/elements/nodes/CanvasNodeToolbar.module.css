@@ -1,0 +1,49 @@
+.canvasNodeToolbar {
+  padding-bottom: var(--spacing-xs, 8px);
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.isExperimentalNdvActive {
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: var(--spacing-3xs, 4px);
+  zoom: var(--canvas-zoom-compensation-factor, 1);
+  margin-bottom: var(--spacing-2xs, 6px);
+}
+
+.readOnly {
+  opacity: 0.75;
+}
+
+.canvasNodeToolbarItems {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-canvas-background, #fff);
+  border-radius: var(--border-radius-base, 6px);
+}
+
+.forceVisible {
+  opacity: 1 !important;
+}
+
+.statusIcons {
+  margin-inline-end: var(--spacing-3xs, 4px);
+}
+
+.colorPalette {
+  display: flex;
+  gap: 4px;
+  padding: 4px;
+}
+
+.swatch {
+  width: 16px;
+  height: 16px;
+  border-radius: 3px;
+  border: 1px solid rgba(0,0,0,0.15);
+  cursor: pointer;
+}
+

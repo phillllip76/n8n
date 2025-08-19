@@ -1,0 +1,70 @@
+.status {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-5xs, 4px);
+  font-weight: var(--font-weight-bold, 600);
+}
+
+.runData {
+  color: var(--color-success, #2ecc71);
+}
+
+.waiting {
+  color: var(--color-secondary, #6c5ce7);
+}
+
+.pinnedData {
+  color: var(--color-secondary, #6c5ce7);
+}
+
+.nodeWaitingSpinner,
+.running {
+  color: hsl(var(--color-primary-h, 252), var(--color-primary-s, 85%), var(--color-primary-l, 60%));
+}
+
+.absoluteSpinner {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3.75em;
+  color: hsla(var(--color-primary-h, 252), var(--color-primary-s, 85%), var(--color-primary-l, 60%), 0.7);
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: var(--canvas-node--status-icons-offset, 0);
+}
+
+.spinnerScrim {
+  z-index: 10;
+  background-color: rgba(255, 255, 255, 0.82);
+  border-radius: var(--border-radius-large, 8px);
+}
+
+.issues {
+  color: var(--color-danger, #ff6d5a);
+  cursor: default;
+}
+
+.count {
+  font-size: var(--font-size-s, 14px);
+}
+
+.warning {
+  color: var(--color-warning, #f1c40f);
+}
+
+.disabled {
+  color: var(--color-foreground-xdark, #666);
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.spin {
+  display: inline-block;
+  animation: spin 1s linear infinite;
+}
+

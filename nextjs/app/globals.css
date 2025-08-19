@@ -1,0 +1,6 @@
+:root {
+  --color-canvas-read-only-line: #d9d9d9;
+}
+
+html, body, #__next, main { height: 100%; }
+body { margin: 0; }

@@ -1,0 +1,31 @@
+.edge {
+  transition: stroke 0.3s ease, fill 0.3s ease;
+  stroke: var(--canvas-edge-color, currentColor);
+  stroke-width: calc(2 * var(--canvas-zoom-compensation-factor, 1));
+  stroke-linecap: square;
+}
+
+.edgeLabelWrapper {
+  transform: translateY(calc(var(--spacing-xs, 8px) * -1));
+  position: absolute;
+  --label-translate-y: 0;
+}
+
+.straight {
+  --label-translate-y: -100%;
+}
+
+.edgeLabel {
+  transform: scale(var(--canvas-zoom-compensation-factor, 1)) translate(0, var(--label-translate-y));
+  color: var(--color-text-base, #333);
+  font-size: var(--font-size-xs, 12px);
+  background-color: hsla(
+    var(--color-canvas-background-h, 0),
+    var(--color-canvas-background-s, 0%),
+    var(--color-canvas-background-l, 100%),
+    0.85
+  );
+  padding: 2px 4px;
+  border-radius: 2px;
+}
+
